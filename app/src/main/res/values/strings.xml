@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImsageSEndingToFireStore</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="user_id">User ID</string>
+    <string name="user_name">User Name</string>
+    <string name="connect">connect</string>
+    <string name="authenticate_user">Authenticate User</string>
+</resources>

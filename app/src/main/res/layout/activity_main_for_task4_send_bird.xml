@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Silver"
+    tools:context=".MainActivityForTask4SendBird">
+
+
+
+<!--my main layout in which their are 2 linear layout-->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+
+       >
+
+
+       <LinearLayout
+           android:id="@+id/start_group_channel_list_activity"
+           android:layout_width="match_parent"
+           android:layout_height="90dp"
+           android:background="@color/lightOrange"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="30dp"
+               android:text="GROUP CHANNEL"
+               android:textAlignment="center"
+               android:textColor="@color/white"
+
+               android:textSize="16sp"
+               android:textStyle="bold"></TextView>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:id="@+id/start_open_channel_list_activity"
+           android:layout_width="match_parent"
+           android:layout_height="90dp"
+           android:layout_below="@+id/start_group_channel_list_activity"
+           android:background="@color/lightGreen"
+           android:layout_marginTop="20dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="30dp"
+               android:text="OPEN CHANNEL"
+               android:textAlignment="center"
+               android:textSize="16sp"
+               android:textColor="@color/white"
+               android:textStyle="bold"></TextView>
+
+
+       </LinearLayout>
+
+   </RelativeLayout>
+
+
+</ScrollView>

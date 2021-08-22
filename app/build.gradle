@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.tr.imsagesendingtofirestore"
+        minSdk 21
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '30.0.3'
+//    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+//    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+//    // Required for local unit tests (JUnit 4 framework)
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-firestore:23.0.3'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.karumi:dexter:6.0.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+
+
+    // Sendbird
+//    ya wale liabrary version main koi issue ha
+//    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.170'
+//    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.170'
+
+//    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.168'
+
+    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.88'
+//
+
+//    implementation ('com.sendbird.sdk:sendbird-android-sdk:3.0.170') {
+//        exclude group: 'org.conscrypt', module: 'conscrypt-android'
+//    }
+//    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.99'
+    // Android support libraries
+
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+    // External libraries
+//    Glide
+//    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'org.jsoup:jsoup:1.11.2'
+    implementation 'com.github.stfalcon:multiimageview:0.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+}
+apply plugin: 'com.google.gms.google-services'
