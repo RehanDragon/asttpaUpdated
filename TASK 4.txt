@@ -1,0 +1,3 @@
+Your next task is to build chat application using SENDBIRD, 
+it is a third party library. You can get help for their documentation.
+You just have to create one to one text chat.
