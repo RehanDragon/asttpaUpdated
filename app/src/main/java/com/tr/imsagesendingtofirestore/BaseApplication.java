@@ -25,7 +25,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 //        PreferenceUtils.init(getApplicationContext());
-
+//Ya mare custom bnye hue logic ha kise documentation main nai mile ge , mena pehla object create kra Task 4 ka phir wehan sa variable buliya User Id ka aur Nickname ka then ausa return kra dia ku ka log cat main return null likha a reha tha to mena socha ya kr k dakhu
 
 //        Intent i= Intent.getIntentOld()
 
