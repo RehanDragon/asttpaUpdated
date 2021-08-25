@@ -27,6 +27,7 @@ public class MainActivityForTask4SendBird extends AppCompatActivity {
         start_group_channel_list_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Intent intent = new Intent(MainActivityForTask4SendBird.this, ChannelListActivity.class);
                 Intent intent = new Intent(MainActivityForTask4SendBird.this, ChannelListActivity.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("channelType", Constants.groupChannelType);

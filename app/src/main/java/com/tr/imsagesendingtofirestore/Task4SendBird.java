@@ -19,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.User;
+import com.sendbird.uikit.activities.ChannelListActivity;
 
 // sendbird works on User authentication so this is Login form part
 // this is login Activity
@@ -27,7 +28,7 @@ public class Task4SendBird extends AppCompatActivity {
 
 
     private LinearLayout mLoginLayout;
-    private EditText mUserIdEditText, mUserNicknameEditText;
+  static   EditText mUserIdEditText, mUserNicknameEditText;
     private Button mConnectButton;
     private SharedPreferences mPrefs;
 //OK we need to create channel from our dashboard then it will show
@@ -70,6 +71,11 @@ public class Task4SendBird extends AppCompatActivity {
 
 
         SendBird.init(APP_ID, this.getApplicationContext());
+
+
+
+
+
 
         mConnectButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,8 +140,11 @@ public class Task4SendBird extends AppCompatActivity {
 //                String mobile = intent.getStringExtra("mobile");
 
 
-//                 here we will make it to go to UI kit
-                Intent intent = new Intent(Task4SendBird.this, MainActivityForTask4SendBird.class);
+
+
+
+//
+                Intent intent = new Intent(Task4SendBird.this, MainActivityForBaseActivity.class);
 
 //                intent=getIntent();
 //                String uID=   intent.getStringExtra("userid");

@@ -1,25 +1,45 @@
 package com.tr.imsagesendingtofirestore;
 
+import android.app.Application;
+import android.content.Intent;
+
 import androidx.multidex.MultiDexApplication;
 
+import com.sendbird.android.SendBird;
 import com.sendbird.uikit.SendBirdUIKit;
 import com.sendbird.uikit.adapter.SendBirdUIKitAdapter;
 import com.sendbird.uikit.interfaces.UserInfo;
 
-public class BaseApplication extends MultiDexApplication {
+import java.net.URISyntaxException;
+
+public class BaseApplication extends Application {
 
     static final  String APP_ID="07D33BD9-A9E3-436F-A72D-E385E2383BDB";
 
+    String uID,Nk_NM;
 
+    Task4SendBird task4SendBird;
+    Intent i;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        PreferenceUtils.init(getApplicationContext());
+//        PreferenceUtils.init(getApplicationContext());
+
+
+//        Intent i= Intent.getIntentOld()
+
+        task4SendBird=new Task4SendBird();
+
+//        task4SendBird.mUserNicknameEditText.getText().toString();
+//        task4SendBird.mUserIdEditText.getText().toString();
+
+
 
         SendBirdUIKit.init(new SendBirdUIKitAdapter() {
             @Override
             public String getAppId() {
+//                return "2D7B4CDB-932F-4082-9B09-A1153792DC8D";  // The ID of the Sendbird application which UIKit sample app uses.
                 return APP_ID;
             }
 
@@ -33,27 +53,93 @@ public class BaseApplication extends MultiDexApplication {
                 return new UserInfo() {
                     @Override
                     public String getUserId() {
-                        return PreferenceUtils.getUserId();
+//                        Intent i ;
+//                        uID="" ;
+//                        try {
+//                            //                intent=getIntent();
+////                String uID=   intent.getStringExtra("userid");
+//                             i = Intent.getIntent("userid");
+//
+//                              uID= i.getStringExtra("userid");
+//
+//                        } catch (URISyntaxException e) {
+//                            e.printStackTrace();
+//                        }
+                        return         task4SendBird.mUserIdEditText.getText().toString();
                     }
 
                     @Override
                     public String getNickname() {
-                        return PreferenceUtils.getNickname();
+
+
+//                        try {
+//                            //                intent=getIntent();
+////                String uID=   intent.getStringExtra("userid");
+//                            i = Intent.getIntent("nickname");
+//
+//                            Nk_NM= i.getStringExtra("nickname");
+//
+//                        } catch (URISyntaxException e) {
+//                            e.printStackTrace();
+//                        }
+
+
+
+
+                        return task4SendBird.mUserNicknameEditText.getText().toString(); // The nickname of the user you wish to log in as
                     }
 
                     @Override
                     public String getProfileUrl() {
-                        return PreferenceUtils.getProfileUrl();
+                        return "";
                     }
                 };
             }
         }, this);
 
-        boolean useDarkTheme = PreferenceUtils.isUsingDarkTheme();
-        SendBirdUIKit.setDefaultThemeMode(useDarkTheme ? SendBirdUIKit.ThemeMode.Dark : SendBirdUIKit.ThemeMode.Light);
-        PushUtils.registerPushHandler(new MyFirebaseMessagingService());
-        SendBirdUIKit.setLogLevel(SendBirdUIKit.LogLevel.ALL);
-        SendBirdUIKit.setUseDefaultUserProfile(true);
+
+
+
+
+//        SendBird
+
+//        SendBirdUIKit.init(new SendBirdUIKitAdapter() {
+//            @Override
+//            public String getAppId() {
+//                return APP_ID;
+//            }
+//
+//            @Override
+//            public String getAccessToken() {
+//                return "";
+//            }
+//
+//            @Override
+//            public UserInfo getUserInfo() {
+//                return new UserInfo() {
+//                    @Override
+//                    public String getUserId() {
+//                        return PreferenceUtils.getUserId();
+//                    }
+//
+//                    @Override
+//                    public String getNickname() {
+//                        return PreferenceUtils.getNickname();
+//                    }
+//
+//                    @Override
+//                    public String getProfileUrl() {
+//                        return PreferenceUtils.getProfileUrl();
+//                    }
+//                };
+//            }
+//        }, this);
+
+//        boolean useDarkTheme = PreferenceUtils.isUsingDarkTheme();
+//        SendBirdUIKit.setDefaultThemeMode(useDarkTheme ? SendBirdUIKit.ThemeMode.Dark : SendBirdUIKit.ThemeMode.Light);
+//        PushUtils.registerPushHandler(new MyFirebaseMessagingService());
+//        SendBirdUIKit.setLogLevel(SendBirdUIKit.LogLevel.ALL);
+//        SendBirdUIKit.setUseDefaultUserProfile(true);
     }
 
 

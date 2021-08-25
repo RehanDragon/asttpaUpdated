@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -14,22 +15,68 @@ import com.sendbird.android.OpenChannelListQuery;
 import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.User;
+import com.sendbird.uikit.SendBirdUIKit;
+import com.sendbird.uikit.adapter.SendBirdUIKitAdapter;
+import com.sendbird.uikit.interfaces.UserInfo;
 
 import java.util.List;
-
+//here we implement UI KIT
 public class ChannelListActivity extends AppCompatActivity {
-    String USER_ID;
-    String CHANNEL_TYPE;
+    static String USER_ID;
+    static String CHANNEL_TYPE;
+    static final  String APP_ID="07D33BD9-A9E3-436F-A72D-E385E2383BDB";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.channel_list);
 
 
-        USER_ID = getIntent().getStringExtra("userID");
-        CHANNEL_TYPE = getIntent().getStringExtra("channelType");
-        init_sendbird();
 
+//        Intent intent1=getIntent();
+//        String uID=   intent1.getStringExtra("userid");
+//        mUserIdEditText.setText(uID);
+
+//        String nk_NM =   getIntent().getStringExtra("nickname");
+//
+//
+//
+//        USER_ID = getIntent().getStringExtra("userID");
+//        CHANNEL_TYPE = getIntent().getStringExtra("channelType");
+//        init_sendbird();
+//
+//
+//        SendBirdUIKit.init(new SendBirdUIKitAdapter() {
+//            @Override
+//            public String getAppId() {
+//                return APP_ID;  // Specify your Sendbird application ID.
+//            }
+//
+//            @Override
+//            public String getAccessToken() {
+//                return "";
+//            }
+//
+//            @Override
+//            public UserInfo getUserInfo() {
+//                return new UserInfo() {
+//                    @Override
+//                    public String getUserId() {
+//                        return USER_ID;  // Specify your user ID.
+//                    }
+//
+//                    @Override
+//                    public String getNickname() {
+//                        return nk_NM;  // Specify your user nickname.
+//                    }
+//
+//                    @Override
+//                    public String getProfileUrl() {
+//                        return "";
+//                    }
+//                };
+//            }
+//        }, this);
 
 
 

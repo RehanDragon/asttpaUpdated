@@ -7,6 +7,6 @@
     <string name="connect">connect</string>
     <string name="authenticate_user">Authenticate User</string>
     <string name="go">Go</string>
-<!--    <string name="user_id">User ID</string>-->
+    <!--    <string name="user_id">User ID</string>-->
     <string name="nickname">Nickname</string>
 </resources>
