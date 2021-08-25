@@ -47,14 +47,15 @@
             android:layout_gravity="center_horizontal"
             android:id="@+id/EMAIL"
             ></EditText>
+
         <EditText
+            android:id="@+id/PASS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="PASS"
-            android:inputType="textPassword"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/PASS"
-            ></EditText>
+            android:hint="PASS"
+            android:inputType="textPassword"></EditText>
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

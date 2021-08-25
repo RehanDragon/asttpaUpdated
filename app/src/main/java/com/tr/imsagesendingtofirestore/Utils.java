@@ -35,21 +35,21 @@ public class Utils {
     /**
      * Crops image into a circle that fits within the ImageView.
      */
-    public static void displayRoundImageFromUrl(final Context context, final String url, final ImageView imageView) {
-        Glide.with(context)
-                .load(url)
-                .asBitmap()
-                .centerCrop()
-                .dontAnimate()
-                .into(new BitmapImageViewTarget(imageView) {
-                    @Override
-                    protected void setResource(Bitmap resource) {
-                        RoundedBitmapDrawable circularBitmapDrawable =
-                                RoundedBitmapDrawableFactory.create(context.getResources(), resource);
-                        circularBitmapDrawable.setCircular(true);
-                        imageView.setImageDrawable(circularBitmapDrawable);
-                    }
-                });
-    }
+//    public static void displayRoundImageFromUrl(final Context context, final String url, final ImageView imageView) {
+//        Glide.with(context)
+//                .load(url)
+////                .asBitmap()
+//                .centerCrop()
+//                .dontAnimate()
+//                .into(new BitmapImageViewTarget(imageView) {
+//                    @Override
+//                    protected void setResource(Bitmap resource) {
+//                        RoundedBitmapDrawable circularBitmapDrawable =
+//                                RoundedBitmapDrawableFactory.create(context.getResources(), resource);
+//                        circularBitmapDrawable.setCircular(true);
+//                        imageView.setImageDrawable(circularBitmapDrawable);
+//                    }
+//                });
+//    }
 
 }

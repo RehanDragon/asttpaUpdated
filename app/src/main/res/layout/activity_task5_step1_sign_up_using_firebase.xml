@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task5Step1SignUpUsingFirebase">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        >
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="SignUP"
+           android:textSize="30sp"
+           android:textAlignment="center"
+           android:layout_centerHorizontal="true"
+           android:id="@+id/SignupText"
+           ></TextView>
+
+
+        <EditText
+            android:id="@+id/UserID"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/SignupText"
+            android:hint="@string/user_id"
+            android:textAlignment="center"></EditText>
+
+        <EditText
+            android:id="@+id/NickName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/UserID"
+            android:layout_marginTop="20dp"
+            android:hint="@string/nickname"
+            android:textAlignment="center"></EditText>
+
+
+        <Button
+            android:id="@+id/Signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NickName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="sign up"></Button>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Signup"
+            android:layout_centerHorizontal="true"
+            android:text="login"
+            android:id="@+id/LOGIN_Task5_FOR_STEP1"
+            ></Button>
+
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

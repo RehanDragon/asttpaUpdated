@@ -313,7 +313,7 @@ public class ChatActivity extends AppCompatActivity {
                     ((SentMessageHolder) holder).bind(message);
                     break;
                 case VIEW_TYPE_MESSAGE_RECEIVED:
-                    ((ReceivedMessageHolder) holder).bind(message);
+//                    ((ReceivedMessageHolder) holder).bind(message);
             }
         }
 
@@ -368,14 +368,18 @@ public class ChatActivity extends AppCompatActivity {
                 profileImage = (ImageView) itemView.findViewById(R.id.image_message_profile);
             }
 
-            void bind(UserMessage message) {
-                messageText.setText(message.getMessage());
-                nameText.setText(message.getSender().getNickname());
-                Utils.displayRoundImageFromUrl(ChatActivity.this,
-                        message.getSender().getProfileUrl(), profileImage);
-                timeText.setText(Utils.formatTime(message.getCreatedAt()));
+//            void bind(UserMessage message) {
+//                messageText.setText(message.getMessage());
+//                nameText.setText(message.getSender().getNickname());
+//                Utils.displayRoundImageFromUrl(ChatActivity.this,
+//                        message.getSender().getProfileUrl(), profileImage);
+//                timeText.setText(Utils.formatTime(message.getCreatedAt()));
+//
+//            }
 
-            }
+
+
+
         }
 
 

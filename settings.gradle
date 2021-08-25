@@ -4,7 +4,31 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+
+        maven { url "https://jitpack.io" }  // Add this line.
+        maven { url "https://repo.sendbird.com/public/maven" }  // Add this line.
+
     }
 }
 rootProject.name = "ImsageSEndingToFireStore"
 include ':app'
+
+/*
+
+help taken from Stack overflow link
+https://stackoverflow.com/questions/66475730/in-android-studio-arctic-fox-canary-8-the-app-level-build-gradle-does-not-gener
+
+In settings.gradle you can add the repositories you want to add to the project
+
+dependencyResolutionManagement {
+   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+   repositories {
+      google()
+      mavenCentral()
+      jcenter()
+      maven { url "https://maven.xyz.com" }
+    }
+}
+
+
+*/

@@ -3,23 +3,54 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://repo.sendbird.com/public/maven" }
+          // Add this line.
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.2"
+//        classpath "com.android.tools.build:gradle:4.0.1"
 //        classpath 'com.android.tools.build:gradle:7.0.1'
         classpath 'com.google.gms:google-services:4.3.10'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+
+
+/*
+
+help taken from Stack overflow link
+https://stackoverflow.com/questions/66475730/in-android-studio-arctic-fox-canary-8-the-app-level-build-gradle-does-not-gener
+
+In settings.gradle you can add the repositories you want to add to the project
+
+dependencyResolutionManagement {
+   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+   repositories {
+      google()
+      mavenCentral()
+      jcenter()
+      maven { url "https://maven.xyz.com" }
+    }
 }
 
 
+*/
+
+
+
+
+
+
+
+
+}
+
+//maven { url "https://jitpack.io" }
 //allprojects {
 //    repositories {
-//        google()
-//        jcenter()
+////        google()
+////        jcenter()
 //        maven { url "https://jitpack.io" }  // Add this line.
 //        maven { url "https://repo.sendbird.com/public/maven" }  // Add this line.
 //    }
@@ -29,6 +60,32 @@ buildscript {
 
 //dependencies {
 //    compile 'org.conscrypt:conscrypt-openjdk:2.5.2:' + osdetector.classifier
+//}
+
+
+
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral() // New line
+//        jcenter()
+//
+//        // NOTE: Keep any other entries you may have had here
+//    }
+//}
+
+
+
+
+//configurations.all {
+//    resolutionStrategy {
+//        eachDependency {
+//            // https://issuetracker.google.com/issues/109894262#comment9
+//            if (requested.group == "org.jetbrains.trove4j" && requested.name == "trove4j" && requested.version == "20160824") {
+//                useTarget("org.jetbrains.intellij.deps:trove4j:1.0.20181211")
+//            }
+//        }
+//    }
 //}
 
 

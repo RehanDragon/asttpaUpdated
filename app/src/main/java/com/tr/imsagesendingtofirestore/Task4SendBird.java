@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -53,12 +54,20 @@ public class Task4SendBird extends AppCompatActivity {
 
 
 
+        Intent  intent1=getIntent();
+        String uID=   intent1.getStringExtra("userid");
+        mUserIdEditText.setText(uID);
+
+        String nk_NM =   intent1.getStringExtra("nickname");
+        mUserNicknameEditText.setText(nk_NM);
+
 //        mUserIdEditText.setText(PreferenceUtils.getUserId());
 //        mUserNicknameEditText.setText(PreferenceUtils.getNickname());
 
-        String savedUserID = mPrefs.getString("userId","");
+//        String savedUserID = mPrefs.getString("userId","");
 
-        mUserIdEditText.setText(savedUserID);
+
+
 
         SendBird.init(APP_ID, this.getApplicationContext());
 
@@ -97,8 +106,12 @@ public class Task4SendBird extends AppCompatActivity {
      */
 
 
-    private void connectToSendBird(final String userId, final String userNickname) {
+    private void connectToSendBird( final String userId,final  String userNickname) {
         mConnectButton.setEnabled(false);
+
+
+
+
 
         SendBird.connect(userId, new SendBird.ConnectHandler() {
             @Override
@@ -117,10 +130,23 @@ public class Task4SendBird extends AppCompatActivity {
 
                 // Update the user's nickname
                 updateCurrentUserInfo(userNickname);
+//                Intent intent = getIntent();
+//                String mobile = intent.getStringExtra("mobile");
 
+
+//                 here we will make it to go to UI kit
                 Intent intent = new Intent(Task4SendBird.this, MainActivityForTask4SendBird.class);
+
+//                intent=getIntent();
+//                String uID=   intent.getStringExtra("userid");
+
                 intent.putExtra("userID", userId);
+//                intent.putExtra(uID, userId);
+
+//                String nk_NM =   intent.getStringExtra("nickname");
+
                 intent.putExtra("userNickname", userNickname);
+//                intent.putExtra(nk_NM, userNickname);
                 startActivity(intent);
                 finish();
             }

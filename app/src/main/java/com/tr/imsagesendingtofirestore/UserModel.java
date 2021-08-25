@@ -7,9 +7,20 @@ private String emailDBvalue;
 private String passDBvalue;
 private String contactDBvalue;
 
+private String userID;
+private String Nickname;
+
+    public UserModel(String userID, String nickname) {
+        this.userID = userID;
+        Nickname = nickname;
+    }
+
     public UserModel() {
 
     }
+
+
+
 
     public UserModel(String imageUriDBvalue, String nameDBvalue, String emailDBvalue, String passDBvalue, String contactDBvalue) {
 
@@ -18,6 +29,23 @@ private String contactDBvalue;
         this.emailDBvalue = emailDBvalue;
         this.passDBvalue = passDBvalue;
         this.contactDBvalue = contactDBvalue;
+    }
+
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public String getNickname() {
+        return Nickname;
+    }
+
+    public void setNickname(String nickname) {
+        Nickname = nickname;
     }
 
     public String getImageUriDBvalue() {
