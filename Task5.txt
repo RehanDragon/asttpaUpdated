@@ -1,0 +1,8 @@
+ Use group channel and add only two members to create one-to-one chat.
+
+User will login or Signup using Firebase.
+After successful login or signup, user will see list of registered users on Home screen.
+On clicking any user, this will initiate our chat with that specific user.
+We will navigate to chat screen then and at this point all chat will be handled by Sendbird.
+Sendbird gives you option to make your own chat UI.
+Follow above steps to create your own chat application using Sendbird
