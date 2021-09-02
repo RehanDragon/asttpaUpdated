@@ -18,7 +18,7 @@ public class BaseApplication extends Application {
 
     String uID,Nk_NM;
 
-    Task4SendBird task4SendBird;
+//    Task4SendBird task4SendBird;
     Intent i;
 
     @Override
@@ -29,13 +29,12 @@ public class BaseApplication extends Application {
 
 //        Intent i= Intent.getIntentOld()
 
-        task4SendBird=new Task4SendBird();
+//        task4SendBird=new Task4SendBird();
 
 //        task4SendBird.mUserNicknameEditText.getText().toString();
 //        task4SendBird.mUserIdEditText.getText().toString();
 
-
-
+//no need to create object because variable are static in other file
         SendBirdUIKit.init(new SendBirdUIKitAdapter() {
             @Override
             public String getAppId() {
@@ -65,7 +64,7 @@ public class BaseApplication extends Application {
 //                        } catch (URISyntaxException e) {
 //                            e.printStackTrace();
 //                        }
-                        return         task4SendBird.mUserIdEditText.getText().toString();
+                        return         Task4SendBird.mUserIdEditText.getText().toString();
                     }
 
                     @Override
@@ -86,7 +85,7 @@ public class BaseApplication extends Application {
 
 
 
-                        return task4SendBird.mUserNicknameEditText.getText().toString(); // The nickname of the user you wish to log in as
+                        return Task4SendBird.mUserNicknameEditText.getText().toString(); // The nickname of the user you wish to log in as
                     }
 
                     @Override
