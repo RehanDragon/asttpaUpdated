@@ -28,7 +28,7 @@ public class Task4SendBird extends AppCompatActivity {
 
 
     private LinearLayout mLoginLayout;
-  static   EditText mUserIdEditText, mUserNicknameEditText;
+  static   EditText mUserIdEditText, mUserNicknameEditText , PhoneNoEdtext;
     private Button mConnectButton;
     private SharedPreferences mPrefs;
 //OK we need to create channel from our dashboard then it will show
@@ -52,6 +52,7 @@ public class Task4SendBird extends AppCompatActivity {
         mUserIdEditText = findViewById(R.id.edittext_login_user_id);
         mUserNicknameEditText = findViewById(R.id.edittext_login_user);
         mConnectButton=findViewById(R.id.button_login_connect);
+        PhoneNoEdtext=findViewById(R.id.phoneNoEdtext);
 
 
 
@@ -62,6 +63,9 @@ public class Task4SendBird extends AppCompatActivity {
         String nk_NM =   intent1.getStringExtra("nickname");
         mUserNicknameEditText.setText(nk_NM);
 
+
+        String ph_No = intent1.getStringExtra("phoneNo");
+        PhoneNoEdtext.setText(ph_No);
 //        mUserIdEditText.setText(PreferenceUtils.getUserId());
 //        mUserNicknameEditText.setText(PreferenceUtils.getNickname());
 

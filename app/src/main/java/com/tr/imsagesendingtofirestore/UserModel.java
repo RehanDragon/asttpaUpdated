@@ -9,18 +9,25 @@ private String contactDBvalue;
 
 private String userID;
 private String Nickname;
+private String Phone;
 
-    public UserModel(String userID, String nickname) {
+    public UserModel(String userID, String nickname , String pHONE) {
         this.userID = userID;
         Nickname = nickname;
+        Phone=pHONE;
     }
 
     public UserModel() {
 
     }
 
+    public String getPhone() {
+        return Phone;
+    }
 
-
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
 
     public UserModel(String imageUriDBvalue, String nameDBvalue, String emailDBvalue, String passDBvalue, String contactDBvalue) {
 

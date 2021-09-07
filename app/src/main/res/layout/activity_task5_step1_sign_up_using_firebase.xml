@@ -15,20 +15,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="400dp"
         android:layout_gravity="center"
         >
 
 
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="SignUP"
-           android:textSize="30sp"
-           android:textAlignment="center"
-           android:layout_centerHorizontal="true"
-           android:id="@+id/SignupText"
-           ></TextView>
+        <TextView
+            android:id="@+id/SignupText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SignUP"
+            android:textAlignment="center"
+            android:textSize="30sp"></TextView>
 
 
         <EditText
@@ -49,11 +48,23 @@
             android:textAlignment="center"></EditText>
 
 
+        <TextView
+            android:id="@+id/PhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/NickName"
+            android:layout_marginTop="20dp"
+            android:hint="@string/phone_no"
+            android:textAlignment="center"></TextView>
+
+
+
+
         <Button
             android:id="@+id/Signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NickName"
+            android:layout_below="@+id/PhoneNo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:text="sign up"></Button>
