@@ -36,7 +36,8 @@ public class Task4SendBird extends AppCompatActivity {
 //my id
 
     static final  String APP_ID="DC4FAB59-A625-4404-AABE-DD38AA12ECCD";
-
+   static String userId;
+   static String userNickname;
 
 //    sample id
 //    this sample APP_ID is working
@@ -85,10 +86,10 @@ public class Task4SendBird extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String userId = mUserIdEditText.getText().toString();
+                 userId = mUserIdEditText.getText().toString();
                 userId = userId.replaceAll("\\s", "");
 
-                String userNickname = mUserNicknameEditText.getText().toString();
+                userNickname = mUserNicknameEditText.getText().toString();
                 SharedPreferences.Editor mEditor = mPrefs.edit();
                 mEditor.putString("userId", userId).commit();
                 mEditor.putString("userNickName", userNickname).commit();
