@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 public class PhoneAuthentication extends AppCompatActivity {
-    private EditText editTextMobile;
+  static    EditText editTextMobile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
