@@ -35,7 +35,7 @@ public class Task4SendBird extends AppCompatActivity {
 //    I dont know why my group channel is not showing I had created in my dashboard I might have done something wron in my dash board
 //my id
 
-    static final  String APP_ID="07D33BD9-A9E3-436F-A72D-E385E2383BDB";
+    static final  String APP_ID="4AC1B00D-8B16-4D18-8D5B-5A0DD17C6497";
 
 
 //    sample id
